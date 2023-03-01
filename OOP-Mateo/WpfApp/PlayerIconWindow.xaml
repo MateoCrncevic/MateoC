@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="WpfApp.PlayerDisplayControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp"
+             mc:Ignorable="d" 
+             d:DesignHeight="75" d:DesignWidth="75" MouseDown="UserControl_MouseDown">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image x:Name="imgPlayerImage" Grid.Row="0" Stretch="Fill" Source="Images/blankPerson.png" VerticalAlignment="Top" HorizontalAlignment="Center" Width="35" />
+        <Label x:Name="lblShirtNumber" Grid.Row="0" Content="10"  FontSize="8" FontWeight="Bold" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="8"/>
+        <Label x:Name="lblPlayerName" Grid.Row="1" Content="" HorizontalAlignment="Center" FontSize="8" FontWeight="Bold" VerticalAlignment="Top" />
+        <Label x:Name="lblPlayerLastname" Grid.Row="1" Content="" HorizontalAlignment="Center" FontSize="8" FontWeight="Bold" VerticalAlignment="Center"  />
+    </Grid>
+</UserControl>

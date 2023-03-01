@@ -1,0 +1,127 @@
+﻿<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:properties ="clr-namespace:WpfApp.Properties"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="700" WindowStartupLocation="CenterScreen">
+    
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width ="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <ToolBar
+            Grid.ColumnSpan="6">
+            <Button Content="{x:Static properties:Resources.btnSettings}"
+                    x:Name="btnSettings"
+                    Click="btnSettings_Click" VerticalAlignment="Stretch"/>
+        </ToolBar>
+
+        <ComboBox
+            Grid.Row="1"
+            Grid.Column="1"
+            x:Name="cbMainTeam"
+            Height="20"
+            Width="150"
+            Margin="30"
+            SelectionChanged="cbMainTeam_SelectionChanged">
+        </ComboBox>
+
+        <Button
+            x:Name="btnMainTeamDisplay"
+             Grid.Row="1"
+             Grid.Column="1"
+             Content="{x:Static properties:Resources.btnMainTeamDisplay}"
+             Margin="30,55,30,0"
+             VerticalAlignment="Top"
+             Width="90"
+             Click="btnMainTeamDisplay_Click">
+        </Button>
+
+        <ComboBox
+            Grid.Row="1"
+            Grid.Column="5"
+            x:Name="cbOtherTeam"
+            Height="20"
+            Width="150"
+            Margin="30"
+            SelectionChanged="cbOtherTeam_SelectionChanged">
+        </ComboBox>
+
+        <Button
+            x:Name="btnOtherTeamDisplay"
+             Grid.Row="1"
+             Grid.Column="5"
+             Content="{x:Static properties:Resources.btnShowStats}"
+             Margin="30,55,30,0"
+             VerticalAlignment="Top"
+             Width="90"
+             Click="btnOtherTeamDisplay_Click">
+        </Button>
+
+        <Label Name="lblMainTeamScore" Grid.Row="1" Content="" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right"  FontSize="25"/>
+        <Label Name="lblScoreDelimiter" Grid.Row="1"  Grid.Column="3" Content=":" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Label Name="lblOtherTeamScore" Grid.Row="1" Content="" Grid.Column="4"  VerticalAlignment="Center" HorizontalAlignment="Left"  FontSize="25"/>
+
+        <Grid 
+            x:Name="startingElevenGrid"
+            Grid.Row="2"
+            Grid.RowSpan="2"
+            Grid.ColumnSpan="6"
+            Margin="30">
+
+            <Grid.Background>
+                <ImageBrush ImageSource="Images/unnamed.png" Stretch="Fill" />
+            </Grid.Background>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid x:Name="grdMainTeamStartingEleven">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center" x:Name="pnlMainGoalee" />
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center" x:Name="pnlMainDefence" Grid.Column="1"/>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center" x:Name="pnlMainMidfield"  Grid.Column="2"/>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center" x:Name="pnlMainOffence"  Grid.Column="3"/>
+
+            </Grid>
+            <Grid x:Name="grdOtherTeamStartingEleven" Grid.Column="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center" x:Name="pnlOtherOffence"/>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center"  x:Name="pnlOtherMidfield" Grid.Column="1"/>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center"  x:Name="pnlOtherDecence" Grid.Column="2"/>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center"  x:Name="pnlOtherGoalee" Grid.Column="3"/>
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Window>
