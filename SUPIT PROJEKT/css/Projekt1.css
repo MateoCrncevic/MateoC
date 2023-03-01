@@ -1,0 +1,78 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: auto;
+    padding: 0;
+}
+
+#margina{
+    height: 75px;
+}
+
+
+
+#header{
+
+    background-color: black;
+    color:white;
+    display: flex;
+    flex-direction: row;  
+    align-items: center;
+    height: 75px;
+    width: 100%;
+    position: fixed;
+
+}
+
+
+ul li {
+    display: inline;
+    padding: 0 20px 0 20px;
+    
+}
+
+ul li a {
+    color: white;
+     text-decoration: none;
+     font-size: 12px;
+     
+}
+
+ul li a:hover{
+    color: yellow;
+}
+
+#LogoAlgebra{
+    height: 45px;
+    padding-left: 50px;
+
+}
+
+
+
+@media only screen and (max-width:768px){
+
+    
+    #header{
+        height: 250px;
+        justify-content: space-evenly;
+
+    }
+
+    #typewriter{
+        font-size: 15px;
+    }
+
+    ul li {
+        display: block;
+        text-align: right;
+        padding: 10px 0 5px 0;
+    }
+    #logo{
+        height: 100px;
+        padding-left: 0;
+    }
+
+}
+
+
+

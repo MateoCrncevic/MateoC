@@ -1,0 +1,45 @@
+﻿@model IEnumerable<RWA.Models.SubCategory>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Pregled potkategorija</h2>
+
+<p>
+    @Html.ActionLink("Kreiraj", "InsertSubCategory") 
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IDPotKategorija)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Naziv)
+        </th>
+        <th>
+            <label>ID kategorije</label>
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDPotKategorija)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Naziv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KategorijaID)    
+        </td>
+        <td>
+            @Html.ActionLink("Uredi", "EditSubCategory", new {  id=item.IDPotKategorija }) |
+
+            @Html.ActionLink("Izbriši", "DeleteSubCategory", new { id = item.IDPotKategorija })
+        </td>
+    </tr>
+}
+
+</table>

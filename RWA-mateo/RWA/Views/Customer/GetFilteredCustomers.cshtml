@@ -1,0 +1,152 @@
+﻿@model  RWA.Models.ViewModel.ShowCustomersVM
+@{
+    ViewBag.Title = "Kupci";
+    <script src="~/Scripts/ShowBillStavka.js"></script>
+    SelectList ddlGradovi = new SelectList(
+        items: Model.Towns,
+        dataTextField: "Naziv",
+        dataValueField: "IDGrad");
+
+    SelectList ddlDrzave = new SelectList(
+        items: Model.Countries,
+        dataTextField: "Naziv",
+        dataValueField: "IDDrzava");
+
+    SelectList ddlSortTypes = new SelectList(
+        items: Model.Sorts,
+        dataTextField : "Naziv",
+        dataValueField : "ID",
+        selectedValue:Model.SortByType
+        );
+    SelectList ddlCustomersPerPage = new SelectList(
+        items: Model.CustomersPerPage,
+        dataTextField: "BrojKupacaPoStranici",
+        dataValueField: "ID",
+        selectedValue: Model.CustomersPerOnePage
+        );
+
+}
+<div class="jumbotron">
+    @using (Html.BeginForm(controllerName: "Customer", actionName: "GetFilteredCustomers", htmlAttributes: new { id = "formCustomer" }, routeValues: null, method: FormMethod.Post))
+    {
+        <div class="form-group">
+            @Html.Label(expression: "IDDrzava", labelText: "Drzava")
+            @Html.DropDownList(
+                optionLabel: "--- odaberi ---",
+                selectList: ddlDrzave,
+                name: "IDDrzava",
+                htmlAttributes: new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.Label(expression: "IDGrad", labelText: "Grad")
+            @Html.DropDownList(
+                 optionLabel: "--- odaberi ---",
+                 selectList: ddlGradovi,
+                 name: "IDGrad",
+                 htmlAttributes: new { @class = "form-control" })
+        </div>
+        <hr />
+
+        <div class="form-group">
+            @Html.Label(expression: "ID", labelText: "Sortiraj")
+            @Html.DropDownList(
+                 selectList: ddlSortTypes,
+                 name: "SortByType",
+                 htmlAttributes: new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.Label(expression: "ID", labelText: "Broj kupaca po stranici")
+            @Html.DropDownList(
+                 selectList: ddlCustomersPerPage,
+                 name: "CustomersPerPage",
+                 htmlAttributes: new { @class = "form-control" })
+        </div>
+        <div>
+            <input type="button" value="Prethodna stranica" onclick="pageDown()" />
+            <input type="text" name="Page" id="page" value="@Model.Page" />
+            <input type="button" value="Sljedeća stranica" onclick="pageUp()" />
+        </div>
+    }
+    <table class="table table-sm table-striped bg-info">
+        <thead>
+            <tr>
+                <th>Ime</th>
+                <th>Prezime</th>
+                <th>E-mail</th>
+                <th>Telefon</th>
+                <th>Država</th>
+                <th>Grad</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var k in Model.Customers)
+            {
+                <tr>
+                    <td>@k.Ime</td>
+                    <td>@k.Prezime</td>
+                    <td>
+                        @k.Email
+                    </td>
+                    <td>@k.Telefon</td>
+                    <td>@k.Town.Naziv</td>
+                    <td>@k.Town.Country.Naziv</td>
+                    <td>
+                        @Html.ActionLink("Uredi", "EditCustomer", new { id = k.IDKupac }) |
+                        <input type="button" value="Prikaži račune" onclick="showBillPartialView(@k.IDKupac)" />
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+<div id="getCustomersBills" >
+</div>
+
+<div id="getBillStavke">
+
+</div>
+
+
+
+@section scripts{
+    <script>
+        var page = @Model.Page;
+        $('#IDDrzava').change(e => $('#formCustomer').submit()); 
+        $('#IDGrad').change(e => {
+            if (e.target.value !== '') {
+                $('table').show();
+                $('#formCustomer').submit();
+            } else {
+                $('table').hide();
+            }
+        });
+        $('#SortByType').change(e => $('#formCustomer').submit());
+        $('#CustomersPerPage').change(e => $('#formCustomer').submit());
+
+        function showBillPartialView(id) {
+            var url = "/Customer/ShowCustomerBills/";
+            $.get(url, { id: id })
+                .done(function (response) {
+                    $("#getCustomersBills").html(response);   
+                                                               
+                });
+        }
+        function pageDown() {
+            page = page - 1;
+            $("#page").val(page);
+            $('#formCustomer').submit();
+        };
+
+        function pageUp() {
+            page = page + 1;
+            $("#page").val(page);
+            $('#formCustomer').submit();
+
+        };
+    </script>
+}
+
+

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onama</title>
+    <link rel="stylesheet" href="../css/Projekt1.css">
+    <link rel="stylesheet" href="../css/Novost1.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    
+    <script src="/java/jquery.js"></script>
+    <script src="/lightbox2-2.11.3/dist/js/lightbox.js"></script>
+    <link rel="stylesheet" href="/lightbox2-2.11.3/dist/css/lightbox.css">
+    <link rel="stylesheet" href="/jquery-ui-1.12.1/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="/java/kontakt.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <img id="LogoAlgebra" src="../img/Algebra-logo.png" alt="">
+        <ul>
+            <li>
+                <a href="../Html/index.html">Početna</a> </li>
+
+            <li>
+                <a href="../Html/onama.html">O nama</a> </li>
+
+            <li>
+                <a href="../Html/novosti.html">Novosti</a> </li>
+
+            <li>
+                <a href="../Html/nastavniplan.html">Nastavni plan</a> </li>
+
+            <li>
+                <a class="kontakt" href="#kontakt">Kontakt</a> </li>
+        </ul>
+
+        
+    </div>
+
+    
+
+    <div class="PozadinaNovosti" id="PozadinaNovosti1"></div>
+
+    
+
+    <div class="Naslov"><h1>WorldSkills natjecanje - Kazan 2019</h1></div>
+    <div class="OdlomakNovost">
+        <p>Nakon godinu dana priprema za natjecanje WorldSkills
+            Kazan 2019 na kojem je sudjelovalo 1300 natjecatelja iz
+            cijelog svijeta, trud se itekako isplatio. Josip,
+            student 3. godine preddiplomskog studija sistemskog
+            inženjerstva osvojio je 12. mjesto u vještini IT
+            Networks and System Administration te osvojio medalju
+            izvrsnosti! Čestitke Josipu ali i njegovim/našim
+            mentorima koji su ga pripremali za ovo natjecanje –
+            voditelju studija sistemskog inženjerstva Silviju
+            Papiću, voditelju katedre za operacijske sustave –
+            Vedranu Dakiću i asistentu na studiju sistemskog
+            inženjerstva – Jasminu Redžepagiću. Čestitke i našem
+            studentu 3.godine preddiplomskog studija programskog
+            inženjerstva Josipu Horvatu i mentoru voditelju katedre
+            za programsko inženjerstvo - Goranu Đambiću na osvojenom
+            16.mjestu u vještini IT Software Solutions for Business.</p>
+    </div>
+
+    <div id="SlikeNovosti1">
+        <div class="SlikaNovosti1"><a href="/img/galerija1.jpg" data-lightbox="roadtrip"><img src="/img/galerija1.jpg" alt="PrvaSlika"></a></div>
+        <div class="SlikaNovosti1"><a href="/img/galerija2.jpg" data-lightbox="roadtrip"><img src="/img/galerija2.jpg" alt="DrugaSlika"></a></div>
+    </div>
+
+
+    <div id="VideoNovosti1"><video controls src="/video/worldskills.mp4"></video></div>
+    
+
+
+   
+
+    
+
+    <div id="footer">
+
+        
+        <h3>BUDI IZVRSTAN U ONOM STO VOLIS</h3>
+        <h3 id="slika-zaiskri">ZAISKRI</h3>
+
+    </div>
+
+    <div id="kontakt">
+        <h2>Kontaktirajte nas</h2>
+        <form action="http://www.fulek.com/VUA/SUPIT/ContactUs" method="post">
+          <div id="lijevo">
+            <div class="kontakt-element">
+              <label>
+                <div class="label1">Puno ime</div>
+                <div class="label2">
+                  <input type="text" name="name" id="kontakt-ime" required />
+                </div>
+              </label>
+            </div>
+  
+            <div class="kontakt-element">
+              <label>
+                <div class="label1">E-mail</div>
+                <div class="label2">
+                  <input type="email" name="email" id="kontakt-email" required />
+                </div>
+              </label>
+            </div>
+  
+            <div class="kontakt-element">
+              <label>
+                <div class="label1">Važnost poruke</div>
+                <div class="label2">
+                  <select name="importance" id="kontakt-vaznost">
+                    <option value="visoka">Visoka</option>
+                    <option value="niska">Niska</option>
+                  </select>
+                </div>
+              </label>
+            </div>
+  
+            <div class="kontakt-element">
+              <label>
+                <div class="label1">Primaj newsletter:</div>
+                <div class="label2">
+                  <input
+                    type="checkbox"
+                    name="newsletter"
+                    id="kontakt-newsletter"
+                  /></div
+              ></label>
+            </div>
+          </div>
+  
+          <div id="desno">
+            <div class="kontakt-element">
+              <label>
+                <div class="label1">Vaša poruka</div>
+                <div class="label2">
+                  <textarea
+                    name="message"
+                    id=""
+                    cols="30"
+                    rows="10"
+                    required
+                  ></textarea>
+                </div>
+              </label>
+            </div>
+          </div>
+  
+          <input type="submit" id="posalji" style="display: none" />
+        </form>
+      </div>
+</body>
+</html>

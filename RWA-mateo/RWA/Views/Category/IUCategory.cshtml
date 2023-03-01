@@ -1,0 +1,33 @@
+﻿@model RWA.Models.CategoryViewModel.IUCategoryViewModel
+
+@{
+    ViewBag.Title = @Model.Title;
+}
+
+<h2>@Model.Title</h2>
+
+@using (Html.BeginForm(Model.ActionMetod)) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    @Html.HiddenFor(model => model.Category.IDKategorija, new { htmlAttributes = new { @class = "form-control" } })
+    <div class="form-group">
+        @Html.LabelFor(model => model.Category.Naziv, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Category.Naziv, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Category.Naziv, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Spremi" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Natrag na listu", "Index")
+</div>

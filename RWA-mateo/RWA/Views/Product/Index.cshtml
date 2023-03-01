@@ -1,0 +1,69 @@
+﻿@model IEnumerable<RWA.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Pregled proizvoda</h2>
+<p>
+    @Html.ActionLink("Kreiraj", "InsertProduct", new { /* id=item.PrimaryKey */ }) 
+</p>
+<table class="table">
+    <tr>
+        <th>
+            ID Proizvoda
+        </th>
+        <th>
+            Naziv
+        </th>
+        <th>
+            Broj proizvoda
+        </th>
+        <th>
+            Boja
+        </th>
+        <th>
+            Minimalna količina na skladištu
+        </th>
+        <th>
+            Cijena bez pdv-a
+        </th>
+        <th>
+            Naziv potkategorije
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdProizvod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Naziv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrojProizvoda)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Boja)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinKolicinaNaSkladistu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CijenaBezPdva)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Subcategory.Naziv)
+            </td>
+            <td>
+                @Html.ActionLink("Uredi", "EditProduct", new { id = item.IdProizvod }) 
+                @Html.ActionLink("Obriši", "DeleteProduct", new { id = item.IdProizvod })
+
+            </td>
+        </tr>
+    }
+
+</table>

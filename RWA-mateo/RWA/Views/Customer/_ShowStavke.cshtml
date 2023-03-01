@@ -1,0 +1,56 @@
+﻿@model IEnumerable<RWA.Models.Stavka>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IDStavka)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RacunID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kolicina)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProizvodID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CijenaPoKomadu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PopustUPostocima)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UkupnaCijena)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDStavka)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RacunID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kolicina)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProizvodID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CijenaPoKomadu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PopustUPostocima)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UkupnaCijena)
+        </td>
+
+    </tr>
+}
+
+</table>

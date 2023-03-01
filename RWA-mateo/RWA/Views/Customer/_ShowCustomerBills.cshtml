@@ -1,0 +1,48 @@
+﻿@model IEnumerable<RWA.Models.Bill>
+    <script src="~/Scripts/ShowBillStavka.js"></script>
+
+<h3>Računi</h3>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IDRacun)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DatumIzdavanja)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BrojRacuna)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Komentar)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IDRacun)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatumIzdavanja)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrojRacuna)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Komentar)
+            </td>
+            <td>
+                <input type="button" value="Prikaži stavke računa" onclick="showStavkaPartialView(@item.IDRacun)" />
+            </td>
+
+        </tr>
+
+    }
+
+</table>
+
+
+

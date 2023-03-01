@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMaster.master.cs" Inherits="WebFormsCustomers.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <div
+                class="content-wrapper">          
+            <asp:Label runat="server" 
+                Id="lblPickedCustomer"
+                CssClass="pickedBill"
+                Text="[pickedCustomer]"
+                ></asp:Label>
+            &nbsp;/&nbsp;
+            <asp:Label runat="server" 
+                Id="lblPcikedBIll"
+                CssClass="pickedBill"
+                Text="[pickedBill]"
+                ></asp:Label>
+                </div>
+        </header>
+        <div id="body">
+            <section class="content-wrapper main-content clear-fix">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </section>
+        </div>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+#footer{
+    background-image: url(../img/zaiskri-bg.jpg);
+    background-repeat: no-repeat;
+    background-position:bottom center;
+    background-size: 100%;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 1px 1px black;
+    font-size: 30px;
+    height: 350px;
+    padding: 50px;
+
+}
+
+#slika-zaiskri{
+
+    color: #ff0000;
+
+}
+
+@media only screen and (max-width:768px){
+
+
+#footer{
+
+font-size: 25px;
+height: 200px;
+}
+}

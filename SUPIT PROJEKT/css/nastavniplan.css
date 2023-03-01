@@ -1,0 +1,55 @@
+h1{
+    text-align: center;
+    border-bottom: 4px solid rgb(255, 153, 0);
+    margin-top: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin: 50px 250px 50px 250px;
+    padding-bottom: 15px;
+}
+#GlavniContainer {
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 80vw;
+    margin: auto;
+  }
+  
+  #NazivKolegija {
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    animation: trazilica-animacija 1s;
+  }
+  #UnosKolegija {
+    width: 90%;
+    padding: 5px 0 5px 5px;
+  }
+
+#rezultati-tablica tr th {
+    background-color: rgb(230, 230, 230);
+    border-top: 1px solid rgb(119, 119, 119);
+  }
+  
+  #rezultati-tablica tr th,
+  #rezultati-tablica tr td {
+    padding: 5px 10px 5px 10px;
+  }
+  
+  .tipka-obrisi {
+    background-color: #f00;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px solid black;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  #tipka-obrisi:hover {
+    background-color: rgb(255, 100, 52);
+  }
+  
+  @keyframes trazilica-animacija{
+    0%{margin-left: 700px;}
+  }

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<RWA.Models.Country>
+
+@{
+    ViewBag.Title = "SelectCountry";
+    SelectList ddlOpcije = new SelectList(items: Model, dataTextField: "Naziv", dataValueField: "IDDrzava");
+}
+
+<h2>Odaberite državu</h2>
+
+<div class="jumbotron">
+    @using (Html.BeginForm(controllerName: "Customer", actionName: "GetFilteredCustomers"))
+    {
+        @Html.Label(expression: "IDDrzava", labelText: "Država")
+        @Html.DropDownList(
+            optionLabel: "--- odaberi ---",
+            selectList: ddlOpcije,
+            name: "IDDrzava",
+            htmlAttributes: new { @class = "form-control" })
+    }
+</div>
+@section scripts{
+    <script>
+        $('#IDDrzava').change(e => $('form').submit());
+    </script>
+}
+

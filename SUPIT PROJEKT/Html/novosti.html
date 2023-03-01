@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novosti</title>
+    <link rel="stylesheet" href="../css/Projekt1.css">
+    <link rel="stylesheet" href="../css/novosti.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="/jquery-ui-1.12.1/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="/java/kontakt.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <img id="LogoAlgebra" src="../img/Algebra-logo.png" alt="">
+        <ul>
+            <li>
+                <a href="../Html/index.html">Početna</a> </li>
+
+            <li>
+                <a href="../Html/onama.html">O nama</a> </li>
+
+            <li>
+                <a href="../Html/novosti.html">Novosti</a> </li>
+
+            <li>
+                <a href="../Html/nastavniplan.html">Nastavni plan</a> </li>
+
+            <li>
+                <a class="kontakt" href="#kontakt">Kontakt</a> </li>
+        </ul>
+    </div>
+
+    
+
+   <h1 id="Naslov">Novosti</h1>
+    <div id="krugovi">
+        <div class="vijest" id="PrvaVijest"> <a href="Novosti1.html">
+            <p class="Datum">22.08.2019</p>
+            <p class="text">endus dignissimos voluptatem eveniet deleniti unde.</p>
+        </a>
+        </div>
+        <div class="vijest" id="DrugaVijest"> <a href="Novosti2.html">
+            <p class="Datum">22.07.2019</p>
+            <p class="text">apiente repellendus dignissimos voluptatem eveniet deleniti unde.</p>
+        </a>
+        </div>
+        <div class="vijest" id="TrecaVijest"> <a href="Novosti3.html">
+            <p class="Datum">18.04.2019</p>
+            <p class="text">Digitalno junior ljeto</p>
+        </a>
+        </div>
+    </div>
+
+    <div id="footer">
+
+        
+        <h3>BUDI IZVRSTAN U ONOM STO VOLIS</h3>
+        <h3 id="slika-zaiskri">ZAISKRI</h3>
+
+    </div>
+
+    <div id="kontakt">
+        <h2>Kontaktirajte nas</h2>
+        <form action="http://www.fulek.com/VUA/SUPIT/ContactUs" method="post">
+          <div id="lijevo">
+            <div class="kontakt-element">
+              <label>
+                <div class="label1">Puno ime</div>
+                <div class="label2">
+                  <input type="text" name="name" id="kontakt-ime" required />
+                </div>
+              </label>
+            </div>
+  
+            <div class="kontakt-element">
+              <label>
+                <div class="label1">E-mail</div>
+                <div class="label2">
+                  <input type="email" name="email" id="kontakt-email" required />
+                </div>
+              </label>
+            </div>
+  
+            <div class="kontakt-element">
+              <label>
+                <div class="label1">Važnost poruke</div>
+                <div class="label2">
+                  <select name="importance" id="kontakt-vaznost">
+                    <option value="visoka">Visoka</option>
+                    <option value="niska">Niska</option>
+                  </select>
+                </div>
+              </label>
+            </div>
+  
+            <div class="kontakt-element">
+              <label>
+                <div class="label1">Primaj newsletter:</div>
+                <div class="label2">
+                  <input
+                    type="checkbox"
+                    name="newsletter"
+                    id="kontakt-newsletter"
+                  /></div
+              ></label>
+            </div>
+          </div>
+  
+          <div id="desno">
+            <div class="kontakt-element">
+              <label>
+                <div class="label1">Vaša poruka</div>
+                <div class="label2">
+                  <textarea
+                    name="message"
+                    id=""
+                    cols="30"
+                    rows="10"
+                    required
+                  ></textarea>
+                </div>
+              </label>
+            </div>
+          </div>
+  
+          <input type="submit" id="posalji" style="display: none" />
+        </form>
+      </div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+#kampus{
+    width:  100%;
+    height: 300px;
+    background-image: url(/img/kampus-iz-zraka-min-1.jpg);
+    background-size: cover;
+    background-position: center;
+    animation: OnamaSlikaAnimacija 1s;
+}
+#bodyheader{
+    text-align: center;
+    border-bottom: 4px solid rgb(255, 153, 0);
+    margin-top: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin: 50px 250px 50px 250px;
+}
+
+#sidralista li a{
+
+    color: yellow;
+    
+}
+#sidralista{
+    position: fixed;
+    right: 0;
+    animation: sidra-header-animacija 2s; 
+
+}
+
+
+#naslovOnama{
+
+    margin-top: 0px;
+    animation: body-header-animacija 1s;
+
+
+}
+
+@keyframes sidra-header-animacija{
+    0%{right:-200px}
+    100%{right: 10px;}
+  }
+  
+@keyframes body-header-animacija{
+    0%{margin-top: 250px;}
+  }
+
+@keyframes OnamaSlikaAnimacija{
+    0%{margin-top: -100px;}
+}
+
+
+
+  #naslovOnama{
+      text-align: center;
+      margin-top: 50px;
+      border-bottom: 3px yellow solid;
+      margin-left: 200px;
+      margin-right: 200px;
+    
+  }
+
+ .Naslovi{
+     text-align: center;
+ }
+
+ .SiviOdlomak{
+     background-color: rgb(238, 238, 238);
+     font-style: italic;
+     font-family: cursive;
+     padding: 50px 200px 50px 200px;
+ }
+
+ #KvadratiNaseVrijednosti{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+     margin: 20px 150px 50px 150px;
+ }
+.Kvadrat{
+    border: black 1px solid;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+}
+.Kvadrat h2{
+    text-align: center;
+    border-bottom: 1px solid black ;
+    padding-bottom: 5px;
+}
+.Kvadrat p{
+    text-align: justify;
+}
+
+#KvadratiPovijest{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin: 20px 150px 50px 150px;
+    row-gap: 10px;
+}
+
+#KvadratiSaSlikama{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 10px;
+    margin: 20px 150px 50px 150px;
+}
+.MalaSlika{
+    width: fit-content;
+    height: 50px;
+    margin: auto;
+}
+.MalaSlika img{
+    width: auto;
+    height: 100%;
+}
+#KvadratiSaSlikama .Kvadrat{
+    border: 0;
+}
+
+#KakoDoNasContent{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 150px 50px 150px;
+    background-image: url(../img/kakoDoNas.jpg);
+    margin: auto;
+    justify-content: center;
+}
+.sidro{
+    scroll-margin-top: 100px;
+}
+html{
+    scroll-behavior: smooth;
+}
+.KvadratKakoDoNas{
+    margin: 0 15px 0 15px;
+    background-color: white;
+    border: 1px black solid;
+    padding: 20px;
+    width: 100%;
+}
+#KvadratiKakoDoNas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+iframe{
+    max-width: 70vw;
+    margin:auto;
+    margin-top: 50px;
+}
+
