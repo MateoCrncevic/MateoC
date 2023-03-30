@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "h660rM9lVmuXJptRwJABMztga0nytcL2xhXy/pU3LwN2xZzxO3hkKIlFZjuU9UI3D0W5r2bEqW9QZ9iF4BEXRg==",
+  "dgSpecHash": "F7lq3A4gWM2vNCMwO3uotfqza/5CymxlaHyWeCj7Ed5zFpuxnA6qXzXeJ26UZNtpR4YyWSxqZthwGBMhARxlAw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mateo\\Desktop\\MauiApp1\\MauiApp1\\MauiApp1.csproj",
+  "projectFilePath": "C:\\Users\\Mateo\\Desktop\\3. godina\\MateoCrncevic\\MateoC\\MauiApp1\\MauiApp1\\MauiApp1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mateo\\.nuget\\packages\\communitytoolkit.mvvm\\8.0.0-preview3\\communitytoolkit.mvvm.8.0.0-preview3.nupkg.sha512",
     "C:\\Users\\Mateo\\.nuget\\packages\\googlegson\\2.9.1\\googlegson.2.9.1.nupkg.sha512",

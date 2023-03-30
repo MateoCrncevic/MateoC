@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-B:\Prog\OOP Projekt\WpfApp\obj\Release\
+C:\Users\Mateo\Desktop\3. godina\MateoCrncevic\MateoC\OOP-Mateo\WpfApp\obj\Release\
 WpfApp
 none
 false
 TRACE
-B:\Prog\OOP Projekt\WpfApp\App.xaml
-8-157458226
+C:\Users\Mateo\Desktop\3. godina\MateoCrncevic\MateoC\OOP-Mateo\WpfApp\App.xaml
+71040712525
 
-15-384108097
-14-139015256
-ClosingWindow.xaml;LoadingSpinner.xaml;MainWindow.xaml;PlayerDisplayControl.xaml;PlayerShowcaseWindow.xaml;SettingsShortcutWindow.xaml;SettingsWindow.xaml;TeamShowcaseWindow.xaml;
+14813755543
+14674793132
+ClosingWindow.xaml;LoadingWindow.xaml;MainWindow.xaml;PlayerIconWindow.xaml;PlayerStatsWindow.xaml;SettingsWindow.xaml;TeamStatsWindow.xaml;
 
 True
 
